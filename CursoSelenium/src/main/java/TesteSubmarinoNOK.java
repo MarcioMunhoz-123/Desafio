@@ -1,6 +1,6 @@
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
-
+import org.junit.After;
 import org.junit.Before;
 import org.junit.BeforeClass;
 import org.junit.Test;
@@ -8,9 +8,16 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
-public class TesteSubmarinoNOK {	
+public class TesteSubmarinoNOK {
 
 	private WebDriver driver;
+
+	@Aftertest
+
+	public void Teste_Fim() throws InterruptedException {
+		driver.quit();
+
+	}
 
 	@Before
 	public void Teste() throws InterruptedException {
@@ -60,7 +67,7 @@ public class TesteSubmarinoNOK {
 		}
 
 		assertTrue(encontrou_A);
-		driver.quit();
+
 	}
 
 }
